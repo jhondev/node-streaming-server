@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Enjoy your stream</title>
+  </head>
+  <body>
+    <h1>Hello, here's your stream</h1>
+    <canvas id="video-canvas"></canvas>
+    <script src="jsmpeg.min.js"></script>
+    <script>
+      const canvas = document.getElementById("video-canvas");
+      const url = "ws://127.0.0.1:8093";
+      const player = new JSMpeg.Player(url, {
+        canvas: canvas,
+        // loop: true,
+        videoBufferSize: 102410248,
+        // source: JSMpeg.Source.Fetch,
+      });
+    </script>
+  </body>
+</html>
